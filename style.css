@@ -51,20 +51,30 @@ footer {
   background-color: #222;
   color: white;
 }
+/* Style the layout to show image and text side by side */
 .hero {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  padding: 20px;
+  gap: 20px; /* spacing between image and text */
   flex-wrap: wrap;
 }
 
+/* Make the image circular and smaller */
 .profile-photo {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
   object-fit: cover;
-  border: 3px solid white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
+/* Optional: center text and image on smaller screens */
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
